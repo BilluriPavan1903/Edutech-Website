@@ -3,9 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <script src="{% static 'js/home.js' %}" defer></script>
 </head>
 <body>
-  <h1>Welcome to the Home Page!</h1>
-  <p>You are logged in.</p>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="profile-icon" onclick="toggleProfile()">
+      <!-- Round Icon (could be initials or image) -->
+      <span>P</span>
+    </div>
+    <div id="profile-dropdown" class="dropdown hidden">
+      <p>{{ username }}</p>
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <!-- Greeting -->
+  <div class="greeting">
+    <h1>Hi, {{ username }}!</h1>
+  </div>
+
+  <!-- Navigation / Taskbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Upload PDF</a></li>
+      <li><a href="#">Company Based Q&A</a></li>
+      <li><a href="#">Domain Based</a></li>
+      <li><a href="#">Results</a></li>
+    </ul>
+  </nav>
+
+  <!-- Footer -->
+  <footer>
+    <p>Pavan Kumar</p>
+    <p>VIT-AP University, Amaravati, Andhra Pradesh, India</p>
+  </footer>
+
 </body>
 </html>

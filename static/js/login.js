@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("loginForm");
+  const homeUrl = document.getElementById("routeData").dataset.homeUrl;
 
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         if (data.success) {
           alert("Login successful!");
-          window.location.href = "/home/";
+          window.location.href = homeUrl;  // Redirect to home
         } else {
           alert(data.message || "Invalid username or password.");
         }

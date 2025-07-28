@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         if (data.success) {
           alert("Sign up successful!");
-          window.location.href = "/login/";
+          window.location.href = '{% url 'home' %}';
         } else {
           alert(data.message || "Sign up failed.");
         }

@@ -16,6 +16,9 @@
       <input type="email" id="signupEmail" placeholder="Email" required><br>
       <button type="submit">Enter</button>
     </form>
+    <div id="routeData" data-home-url="{% url 'login' %}"></div>
+
+    
     <p>Already have an account?</p>
     <button type="button" onclick="window.location.href='{% url "login" %}'">Login</button>
   </div>

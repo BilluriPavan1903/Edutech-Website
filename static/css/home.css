@@ -1,0 +1,86 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f6fa;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 20px;
+  background-color: #2f3640;
+  position: relative;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #718093;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown.hidden {
+  display: none;
+}
+
+.greeting {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.navbar {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #2f3640;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #e84118;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #dcdde1;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #2f3640;
+}
