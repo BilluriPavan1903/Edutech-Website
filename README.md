@@ -95,6 +95,8 @@ EDUTECH-WEBSITE/
 
 Step-by-Step Setup Guide
 Clone the repository
+
+
 git clone https://github.com/BilluriPavan1903/Edutech-Website.git
 cd EDUTECH-WEBSITE
 Create and activate a Python virtual environment
