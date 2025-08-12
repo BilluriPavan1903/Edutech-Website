@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Upload PDF</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/upload.css' %}" />
+  <script src="{% static 'js/upload.js' %}" defer></script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Upload a PDF to generate Q&A</h2>
+
+    <!-- PDF Upload Form -->
+    <form method="POST" enctype="multipart/form-data" id="upload-form">
+      {% csrf_token %}
+      <input type="file" name="pdf_file" id="pdf-file" accept="application/pdf" required />
+      <button type="submit">Upload</button>
+    </form>
+
+    <!-- Questions Section -->
+    {% if questions_to_ask %}
+    <div id="random-questions-container" style="margin-top: 20px;">
+      <h3>Please answer these questions:</h3>
+      <form id="questions-form" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="pdf_name" value="{{ pdf_name }}">
+        <input type="hidden" name="total" value="{{ questions_to_ask|length }}">
+
+        {% for q in questions_to_ask %}
+          <div class="question-block">
+            <p><strong>{{ q.question_id }}:</strong> {{ q.question }}</p>
+            <input type="text" name="answer_{{ forloop.counter }}" required />
+            <input type="hidden" name="question_id_{{ forloop.counter }}" value="{{ q.question_id }}" />
+            <input type="hidden" name="question_text_{{ forloop.counter }}" value="{{ q.question }}" />
+          </div>
+        {% endfor %}
+        <button type="submit">Submit Answers</button>
+      </form>
+    </div>
+
+    <!-- Container for Show Results button -->
+    <div id="results-button-container" style="margin-top: 20px;"></div>
+    <!-- Container for displaying evaluation results -->
+    <div id="evaluation-results" style="margin-top: 20px; display: none;"></div>
+    {% endif %}
+  </div>
+
+  <!-- Success Message and Question Prompt -->
+  {% if success %}
+  <script>
+    alert("✅ Questions saved successfully!");
+    const ask = confirm("💬 Do you want to answer some questions now?");
+    if (ask) {
+      const container = document.getElementById('random-questions-container');
+      if (container) {
+        container.style.display = 'block';
+        container.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      alert("👍 You can answer questions later.");
+    }
+  </script>
+  {% endif %}
+
+  <!-- Hidden global PDF name for JS access after form is hidden -->
+  {% if pdf_name %}
+    <input type="hidden" id="global-pdf-name" value="{{ pdf_name }}">
+  {% endif %}
+
+</body>
+</html>

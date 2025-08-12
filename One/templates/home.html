@@ -16,8 +16,11 @@
       <span>P</span>
     </div>
     <div id="profile-dropdown" class="dropdown hidden">
-      <p>{{ username }}</p>
-      <a href="#">Logout</a>
+      <p><a href="{% url 'user_profile' %}">{{ username }}</a></p>
+      <a href="#" id="logoutLink">Logout</a>
+
+
+
     </div>
   </div>
 
@@ -29,7 +32,8 @@
   <!-- Navigation / Taskbar -->
   <nav class="navbar">
     <ul>
-      <li><a href="#">Upload PDF</a></li>
+      
+      <li><a href="{% url 'upload' %}">Upload PDF</a></li>
       <li><a href="#">Company Based Q&A</a></li>
       <li><a href="#">Domain Based</a></li>
       <li><a href="#">Results</a></li>

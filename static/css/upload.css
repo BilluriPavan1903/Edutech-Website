@@ -1,0 +1,91 @@
+.container {
+  width: 400px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+input[type="file"] {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.success-msg {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Container for question form */
+#random-questions-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 5px;
+  text-align: left;  /* For better readability */
+}
+
+/* Each question block */
+.question-block {
+  margin-bottom: 20px;
+}
+
+/* Question text */
+.question-block p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Textarea for answers (if used) */
+.question-block textarea {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Input text field for answers */
+.question-block input[type="text"] {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+
+#evaluation-results button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#evaluation-results button:hover {
+  background-color: #45a049;
+}
+

@@ -1,3 +1,5 @@
+// static/js/signup.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const signupForm = document.getElementById("signupForm");
 
@@ -26,20 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch("/signup_user/", {
       method: "POST",
-      body: formData,
+      body: formData
     })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          alert("Sign up successful!");
-          window.location.href = '{% url 'home' %}';
-        } else {
-          alert(data.message || "Sign up failed.");
-        }
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        alert("Something went wrong. Please try again.");
-      });
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert("Sign up successful!");
+        const homeURL = document.getElementById("routeData").dataset.homeUrl;
+        window.location.href = homeURL;
+      } else {
+        alert(data.message || "Sign up failed.");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Something went wrong. Please try again.");
+    });
   });
 });

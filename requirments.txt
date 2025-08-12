@@ -1,0 +1,28 @@
+# --- Django & Server ---
+Django>=3.2,<5.0
+gunicorn
+whitenoise
+dj-database-url
+psycopg2-binary            # If using PostgreSQL on Render
+
+# --- MongoDB (if used) ---
+pymongo
+
+# --- PDF & OCR ---
+pdfplumber
+pdf2image
+pytesseract
+Pillow                      # Required by pdf2image
+
+# --- AI / NLP ---
+transformers
+torch
+sentence-transformers
+
+# --- Text Evaluation ---
+fuzzywuzzy
+python-Levenshtein          # Optional but speeds up fuzzywuzzy
+textstat
+
+# --- Utility ---
+python-dotenv               # If using .env files locally

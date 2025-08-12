@@ -16,3 +16,15 @@ db = client["QA"]
 
 # ✅ Correct Collection: RegDetails
 reg_collection = db["RegDetails"]
+
+
+# ✅ Correct Collection: storedata
+saved_collection = db["PDFDATA"]
+
+# answer saved data 
+saved_useranswer = db["Answers"]
+
+report_collection = db["Reports"]
+
+
+
