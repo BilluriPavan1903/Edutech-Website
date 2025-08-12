@@ -1,0 +1,42 @@
+Edutech Website:
+
+A comprehensive web application designed to analyze questions and answers generated from PDF documents uploaded by users. It uses advanced Natural Language Processing (NLP) models for Question Generation (QG) and Question Answering (QA), along with evaluation techniques to ensure answer accuracy and quality.
+
+Project Overview
+This application enables users to upload PDF files containing study material or any textual content. It then automatically:
+
+Extracts relevant content from the PDFs.
+
+Generates meaningful questions based on the extracted text using a Question Generation model.
+
+Answers those questions using a powerful Question Answering model.
+
+Evaluates the answers for accuracy and readability using fuzzy matching and text statistics.
+
+This makes it a powerful educational tool for self-assessment, tutoring, and exam preparation.
+
+Models & Libraries Used
+1. Question Generation Model
+Model: google/flan-t5-large
+
+Pipeline: text2text-generation from Hugging Face Transformers
+
+Purpose: To generate relevant, contextual questions from the text extracted from the PDF.
+
+Details: This is a large pretrained T5 model fine-tuned for text-to-text tasks including question generation, providing high-quality, natural language questions.
+
+2. Question Answering Model
+Model: deepset/roberta-base-squad2
+
+Pipeline: question-answering from Hugging Face Transformers
+
+Purpose: To answer the generated or user-asked questions based on the uploaded content.
+
+Details: A RoBERTa-based model fine-tuned on SQuAD2.0 dataset, effective in handling answerable and unanswerable questions with high accuracy.
+
+3. Evaluation and Scoring Libraries
+fuzzywuzzy: For fuzzy string matching to compare generated answers with expected answers, calculating similarity scores.
+
+python-Levenshtein: Optional, but speeds up fuzzywuzzy computations.
+
+textstat: Provides readability scores and text complexity metrics to ensure the answers are understandable and meet quality benchmarks.
