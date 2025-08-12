@@ -32,50 +32,61 @@ A comprehensive web application that analyzes questions and answers generated fr
 
 ---
 
+
+
+
+
+
+
+
 ## Project Structure
 
+```text
 EDUTECH-WEBSITE/
-│
-├── huggingface_models/ # Cached Hugging Face models
-├── media/ # Temporary uploaded PDFs and outputs
-├── One/ # Main Django app
-│ ├── templates/
-│ │ ├── home.html
-│ │ ├── login.html
-│ │ ├── signup.html
-│ │ ├── upload.html
-│ │ └── user.html
-│ ├── init.py
-│ ├── asgi.py
-│ ├── db.py # DB models/operations (your custom module)
-│ ├── model.py # ML model loader & wrapper
-│ ├── question.py # QG & QA processing logic
-│ ├── settings.py
-│ ├── urls.py
-│ ├── views.py
-│ └── wsgi.py
-│
-├── project/ # Optional/extendable backend modules
+├── huggingface_models/          # Cached Hugging Face models
+├── media/                       # Temporary uploaded PDFs and outputs
+├── One/                         # Main Django app
+│   ├── templates/
+│   │   ├── home.html
+│   │   ├── login.html
+│   │   ├── signup.html
+│   │   ├── upload.html
+│   │   └── user.html
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── db.py                    # DB models/operations (your custom module)
+│   ├── model.py                 # ML model loader & wrapper
+│   ├── question.py              # QG & QA processing logic
+│   ├── settings.py
+│   ├── urls.py
+│   ├── views.py
+│   └── wsgi.py
+├── project/                     # Optional/extendable backend modules
 ├── static/
-│ ├── css/
-│ │ ├── home.css
-│ │ ├── login.css
-│ │ ├── signup.css
-│ │ └── upload.css
-│ └── js/
-│ ├── home.js
-│ ├── login.js
-│ ├── signup.js
-│ └── upload.js
-│
+│   ├── css/
+│   │   ├── home.css
+│   │   ├── login.css
+│   │   ├── signup.css
+│   │   └── upload.css
+│   └── js/
+│       ├── home.js
+│       ├── login.js
+│       ├── signup.js
+│       └── upload.js
 ├── db.sqlite3
 ├── manage.py
-├── model1.py # Script to download & cache models locally
+├── model1.py                    # Script to download & cache models locally
 ├── requirements.txt
 └── README.md
 
-yaml
-Copy
-Edit
+That final  
+
+
+
+
+
+
+
+
 
 
