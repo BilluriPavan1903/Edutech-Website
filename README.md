@@ -1,4 +1,5 @@
-Edutech Website:
+Edutech Website
+
 
 A comprehensive web application designed to analyze questions and answers generated from PDF documents uploaded by users. It uses advanced Natural Language Processing (NLP) models for Question Generation (QG) and Question Answering (QA), along with evaluation techniques to ensure answer accuracy and quality.
 
@@ -40,3 +41,4 @@ fuzzywuzzy: For fuzzy string matching to compare generated answers with expected
 python-Levenshtein: Optional, but speeds up fuzzywuzzy computations.
 
 textstat: Provides readability scores and text complexity metrics to ensure the answers are understandable and meet quality benchmarks.
+
